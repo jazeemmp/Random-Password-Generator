@@ -38,7 +38,7 @@ input::placeholder {
 #inputFiled{
     padding: 0.7em 0px;
     text-align: center;
-    margin: 20px;
+    margin: 20px 20px 0px 20px;
     font-size: 1.3em;
     font-weight: bolder;
     border-radius: 5px;
@@ -50,7 +50,7 @@ input::placeholder {
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 input:focus{
     outline: none;
@@ -61,7 +61,7 @@ input:focus{
    border-radius: 5px;
    border: none;
    color: #fff;
-   margin-right: 0px 20px;
+   margin:20px;
 }
 .copyBtn:active{
     background:linear-gradient(0deg, rgb(172, 194, 249) 0%, rgb(216, 175, 249) 100%);
