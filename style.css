@@ -15,47 +15,92 @@ body{
     justify-content: center;
 }
 .form{
-    border: 1px solid #000;
-    padding: 20px 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 5px;
+    border-radius: 0.8em;
+    margin: 10px;
+    box-shadow: 5px 5px 15px #00000046;
+}
+.form h2{
+    text-align: center;
+    padding: 20px;
 }
 input::placeholder {
     font-weight: 400;
-    font-size: 11px;
-    opacity: 0.8;
+    font-size: 14px;
+    opacity: 0.5;
     text-align: center;
     padding: 10px;
 }
 #inputFiled{
-    padding: 10px 0px;
+    padding: 0.7em 0px;
     text-align: center;
-    margin: 20px 0px;
-    font-size: 1em;
+    margin: 20px 0px 20px 20px;
+    font-size: 1.3em;
     font-weight: bolder;
     border-radius: 5px;
     border: none;
-    background: rgb(241, 241, 241);
+    background: rgb(238, 238, 238);
+}
+.input-filed{
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
 }
 input:focus{
     outline: none;
 }
-#copyBtn{
-   padding: 0.9em;
+.copyBtn{
+   padding: 1.39em;
    background: linear-gradient(0deg, rgba(87,132,245,1) 0%, rgba(174,87,245,1) 100%);
    border-radius: 5px;
    border: none;
    color: #fff;
+   margin-right: 20px;
 }
+.copyBtn:active{
+    background:linear-gradient(0deg, rgb(172, 194, 249) 0%, rgb(216, 175, 249) 100%);
+}
+.copyBtn::before{
+    content: "copied";
+    position: absolute;
+    top: -12px;
+    right: 32px;
+    font-size: 10px;
+    padding: 4px 6px;
+    border-radius: 50px;
+    background: linear-gradient(0deg, rgba(87,132,245,1) 0%, rgba(174,87,245,1) 100%);
+    display: none;
+}
+.copyBtn::after{
+    content: "";
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+    right: 45px;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    background: linear-gradient(0deg, rgba(87,132,245,1) 0%, rgba(174,87,245,1) 100%);
+    display: none;
+}
+.copyBtn.active::after,
+.copyBtn.active::before{
+    display: block;
+}
+
 #genBtn{
-    padding: 10px 30px;
+    padding: 15px 40px;
     border-radius: 5px;
     border: none;
+    font-size: 1rem;
     background: rgb(87,132,245);
     color: #fff;
-    font-weight: bold;
+    font-weight: bolder;
+    margin-bottom: 20px;
     background: linear-gradient(0deg, rgba(87,132,245,1) 0%, rgba(174,87,245,1) 100%);
 }

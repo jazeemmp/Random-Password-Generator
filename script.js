@@ -11,12 +11,14 @@ function generatePassword(){
    inputFiled.value = password;
 }
 function copyText(){
-    const copyBtn = document.getElementById('copyBtn')
+    const copyBtn = document.getElementById("copyBtn")
+    copyBtn.classList.add("active")
     inputFiled.select()
     inputFiled.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(inputFiled.value);
-    copyBtn.textContent = 'copied !'
+    copyBtn.innerHTML = '<i class="fa-solid fa-clone"></i>'
     setTimeout(function() {
-        copyBtn.innerHTML = '<i class="fa fa-clone"></i>';
+        copyBtn.innerHTML = '<i class="fa-regular fa-clone"></i>';
+        copyBtn.classList.remove("active");
     }, 2000);
 }
