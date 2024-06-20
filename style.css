@@ -38,7 +38,7 @@ input::placeholder {
 #inputFiled{
     padding: 0.7em 0px;
     text-align: center;
-    margin: 20px 0px 20px 0px;
+    margin: 20px 0px 20px 20px;
     font-size: 1.3em;
     font-weight: bolder;
     border-radius: 5px;
